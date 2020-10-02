@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-05-15 18:39:07 -0400">
+    <meta http-equiv="last-modified" content="2020-10-01 21:50:30 -0400">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/syntax.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
 
     
 
@@ -46,7 +48,7 @@
     <link rel="icon" type="image/png" href="./assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="./assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="./assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - Lesson Title"/>
+    <meta name="application-name" content="Software Carpentry -  Introduction to Big Data Analytics using Spark/Python"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="./assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="./assets/favicons/swc/mstile-70x70.png" />
@@ -63,7 +65,7 @@
 	<![endif]-->
 
   <title>
-  Setup &ndash; Lesson Title
+  Setup &ndash;  Introduction to Big Data Analytics using Spark/Python
   </title>
 
   </head>
@@ -72,11 +74,6 @@
     
 
 
-<div class="panel panel-default life-cycle">
-  <div id="life-cycle" class="panel-body pre-alpha">
-    This lesson is still being designed and assembled (Pre-Alpha version)
-  </div>
-</div>
 
 
 
@@ -123,8 +120,8 @@
       </button>
 
       
-      <a href="http://cs.wcupa.edu/lngo/teaching" class="pull-left">
-        <img class="navbar-logo" src="./assets/img/wcupa.png" alt="West Chester University logo" />
+      <a href="https://www.palmetto.clemson.edu" class="pull-left">
+        <img class="navbar-logo" src="./assets/img/clemson.png" alt="West Chester University logo" />
       </a>
 
       
@@ -144,7 +141,13 @@
           <ul class="dropdown-menu">
             
             
-            <li><a href="./01-introduction/index.html">Introduction</a></li>
+            <li><a href="./01-introduction/index.html">Introduction to Apache Spark</a></li>
+            
+            
+            <li><a href="./02-cluster/index.html">Launching the Spark cluster</a></li>
+            
+            
+            <li><a href="./03-notebooks/index.html">Workshop notebooks</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="./aio/index.html">All in one page (Beta)</a></li>
@@ -202,12 +205,76 @@
 
 
 
-<h1 class="maintitle"><a href="./index.html">Lesson Title</a>: Setup</h1>
+<h1 class="maintitle"><a href="./index.html"> Introduction to Big Data Analytics using Spark/Python</a>: Setup</h1>
 
 
 
 <article>
-<p>FIXME</p>
+<blockquote class="callout">
+  <h2 id="prerequisites">Prerequisites</h2>
+  <p>You must have an active Palmetto account. To register
+for a Palmetto account, visit <a href="https://www.palmetto.clemson.edu/palmetto/basic/new/">New Account Request page</a>.</p>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="step-1-open-jupyterhub">Step 1. Open JupyterHub</h2>
+
+  <ul>
+    <li>Open a browser and go to <a href="https://www.palmetto.clemson.edu">https://www.palmetto.clemson.edu</a>.</li>
+    <li>Click the JupyterHub link</li>
+  </ul>
+
+  <p><img src="../fig/setup/01.png" alt="JupyterHub page" style="height:400px" /></p>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="step-2-start-my-server">Step 2. Start My Server</h2>
+
+  <ul>
+    <li>Click the blue <code class="highlighter-rouge">Start My Server</code> button</li>
+  </ul>
+
+  <p><img src="../fig/setup/02.png" alt="Start My Server" style="height:400px" /></p>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="step-3-server-options">Step 3. Server Options</h2>
+
+  <ul>
+    <li>Select the options as shown in the screenshot below
+      <ul>
+        <li>Check the <code class="highlighter-rouge">Advanced</code> box to show the additional options.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="../fig/setup/03.png" alt="Server Options" style="height:1000px" /></p>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="step-4-getting-workshop-materials">Step 4. Getting Workshop Materials</h2>
+
+  <ul>
+    <li>Select <code class="highlighter-rouge">File</code>/<code class="highlighter-rouge">New</code>/<code class="highlighter-rouge">Terminal</code></li>
+  </ul>
+
+  <p><img src="../fig/setup/04.png" alt="Terminal" style="height:300px" /></p>
+
+  <ul>
+    <li>Run the following commands in the terminal</li>
+  </ul>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cp <span class="nt">-R</span> /zfs/citi/spark/myspark <span class="nb">.</span>
+<span class="nv">$ </span><span class="nb">cd </span>myspark
+<span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span>
+</code></pre></div>  </div>
+
+  <p><img src="../fig/setup/05.png" alt="get myspark" style="height:350px" /></p>
+</blockquote>
 
 
 </article>

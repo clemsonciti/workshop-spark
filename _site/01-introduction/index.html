@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-05-15 18:39:07 -0400">
+    <meta http-equiv="last-modified" content="2020-10-01 21:50:30 -0400">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/syntax.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
 
     
 
@@ -46,7 +48,7 @@
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - Lesson Title"/>
+    <meta name="application-name" content="Software Carpentry -  Introduction to Big Data Analytics using Spark/Python"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
@@ -63,7 +65,7 @@
 	<![endif]-->
 
   <title>
-  Introduction &ndash; Lesson Title
+  Introduction to Apache Spark &ndash;  Introduction to Big Data Analytics using Spark/Python
   </title>
 
   </head>
@@ -72,11 +74,6 @@
     
 
 
-<div class="panel panel-default life-cycle">
-  <div id="life-cycle" class="panel-body pre-alpha">
-    This lesson is still being designed and assembled (Pre-Alpha version)
-  </div>
-</div>
 
 
 
@@ -123,8 +120,8 @@
       </button>
 
       
-      <a href="http://cs.wcupa.edu/lngo/teaching" class="pull-left">
-        <img class="navbar-logo" src="../assets/img/wcupa.png" alt="West Chester University logo" />
+      <a href="https://www.palmetto.clemson.edu" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/clemson.png" alt="West Chester University logo" />
       </a>
 
       
@@ -144,7 +141,13 @@
           <ul class="dropdown-menu">
             
             
-            <li><a href="../01-introduction/index.html">Introduction</a></li>
+            <li><a href="../01-introduction/index.html">Introduction to Apache Spark</a></li>
+            
+            
+            <li><a href="../02-cluster/index.html">Launching the Spark cluster</a></li>
+            
+            
+            <li><a href="../03-notebooks/index.html">Workshop notebooks</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio/index.html">All in one page (Beta)</a></li>
@@ -237,13 +240,13 @@
   </div>
   <div class="col-xs-10">
     
-    <h3 class="maintitle"><a href="../">Lesson Title</a></h3>
+    <h3 class="maintitle"><a href="../"> Introduction to Big Data Analytics using Spark/Python</a></h3>
     
   </div>
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      <a href="../02-cluster/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>
@@ -254,7 +257,7 @@
   <div class="col-md-1">
   </div>
   <div class="col-md-10">
-    <h1 class="maintitle">Introduction</h1>
+    <h1 class="maintitle">Introduction to Apache Spark</h1>
   </div>
   <div class="col-md-1">
   </div>
@@ -284,7 +287,10 @@
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>Key question (FIXME)</p>
+	<li><p>What is Spark?</p>
+</li>
+	
+	<li><p>How programming is done in Spark?</p>
 </li>
 	
       </ul>
@@ -298,7 +304,7 @@
       <strong>Objectives</strong>
       <ul>
 	
-	<li><p>First learning objective. (FIXME)</p>
+	<li><p>Understand the general concept of MapReduce programming model</p>
 </li>
 	
       </ul>
@@ -307,7 +313,120 @@
 
 </blockquote>
 
-<p>FIXME</p>
+<blockquote class="slide">
+  <h2 id="1-what-is-spark">1. What is Spark?</h2>
+
+  <ul>
+    <li>A unified compute engine and a set of libraries for parallel
+data processing on computer clusters.</li>
+    <li>Click the JupyterHub link</li>
+  </ul>
+
+  <p><img src="../fig/01-introduction/01.png" alt="Spark" style="height:400px" /></p>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="2-design-philosophy">2. Design philosophy</h2>
+
+  <ul>
+    <li><code class="highlighter-rouge">Unified</code>: Spark supports a wide range of data analytic tasks over the same 
+computing engine and a consistent set of APIs.</li>
+    <li><code class="highlighter-rouge">Computing engine</code>: Spark handles loading data from storage systems and 
+perform computation on the data (in memory) rather than on permanent storage. 
+To adhere to the data locality principle, Spark relies on APIs to provide a 
+transparent common interface with different storage systems for all applications.</li>
+    <li><code class="highlighter-rouge">Libraries</code>: Via its APIs, Spark supports a wide array of internal and 
+external libraries for complex data analytic tasks.</li>
+  </ul>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="3-a-brief-history-of-spark">3. A brief history of Spark</h2>
+
+  <ul>
+    <li>Research project at UC Berkeley AMP Lab in 2009 to address drawbacks of 
+Hadoop MapReduce.</li>
+    <li>Paper published in 2010: <a href="https://static.usenix.org/events/hotcloud10/tech/full_papers/Zaharia.pdf">Spark: Cluster Computing with Working Sets</a></li>
+    <li>Source code is contributed to Apache in 2013. The project had more than 100 
+contributors from more than 30 organizations outside UC Berkeley.</li>
+    <li>Version 1.0 was released in 2014.</li>
+    <li>Currently, Spark is being used extensively in academic and industry 
+(NASA, CERN, Uber, Netflix …).</li>
+  </ul>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="4-map-and-reduce">4. map and reduce</h2>
+
+  <ul>
+    <li>What is <code class="highlighter-rouge">map</code>? A function/procedure that is applied to every individual 
+elements of a collection/list/array/…</li>
+  </ul>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int square<span class="o">(</span>x<span class="o">)</span> <span class="o">{</span> <span class="k">return </span>x<span class="k">*</span>x<span class="p">;</span><span class="o">}</span>
+map square <span class="o">[</span>1,2,3,4] -&gt; <span class="o">[</span>1,4,9,16]
+</code></pre></div>  </div>
+
+  <ul>
+    <li>What is “reduce”? A function/procedure that performs an operation on a list. 
+This operation will “fold/reduce” this list into a single value (or a smaller 
+subset).</li>
+  </ul>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reduce <span class="o">([</span>1,2,3,4]<span class="o">)</span> using sum -&gt; 10
+reduce <span class="o">([</span>1,2,3,4]<span class="o">)</span> using multiply -&gt; 24
+</code></pre></div>  </div>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="5-mapreduce-programming-paradigm">5. MapReduce programming paradigm</h2>
+
+  <ul>
+    <li>Programmers implement:
+      <ul>
+        <li>Map function: Take in the input data and return a key,value pair.</li>
+        <li>Reduce function: Receive the key,value pairs from the mapper and provide a
+final output as a reduction operation on the pairs.</li>
+      </ul>
+    </li>
+    <li>MapReduce Framework handles everything else.</li>
+    <li>Spark implements a MapReduce framework.</li>
+  </ul>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="6-wordcount-the-hello-world-of-big-data">6. WordCount: the Hello, World! of Big Data</h2>
+
+  <ul>
+    <li>Count how many unique words there are in a file/multiple files.</li>
+    <li>Standard parallel programming approach:
+      <ul>
+        <li>Count number of files</li>
+        <li>Set number of processes</li>
+        <li>Possibly setting up dynamic workload assignment</li>
+        <li>A lot of data transfer</li>
+        <li>Significant coding effort</li>
+      </ul>
+    </li>
+  </ul>
+
+  <blockquote class="slide">
+    <h2 id="mapreduce-workflow">MapReduce workflow</h2>
+
+    <p><img src="../fig/01-introduction/02.png" alt="Spark" style="height:400px" /></p>
+  </blockquote>
+
+  <blockquote class="slide">
+    <h2 id="mapreduce-framework">MapReduce framework</h2>
+
+    <p><img src="../fig/01-introduction/03.png" alt="Spark" style="height:400px" /></p>
+  </blockquote>
+</blockquote>
 
 
 
@@ -318,7 +437,7 @@
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>First key point. Brief Answer to questions. (FIXME)</p>
+    <li><p>Spark provides a framework to support big data analytics via MapReduce programming paradigm, unified compute engine, and supporting data processing and analytics libraries.</p>
 </li>
     
   </ul>
@@ -379,7 +498,7 @@
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      <a href="../02-cluster/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>

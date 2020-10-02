@@ -65,7 +65,7 @@
 	<![endif]-->
 
   <title>
-  Discussion &ndash;  Introduction to Big Data Analytics using Spark/Python
+  Launching the Spark cluster &ndash;  Introduction to Big Data Analytics using Spark/Python
   </title>
 
   </head>
@@ -205,15 +205,222 @@
 
 
 
-<h1 class="maintitle"><a href="../index.html"> Introduction to Big Data Analytics using Spark/Python</a>: Discussion</h1>
 
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../01-introduction/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="../"> Introduction to Big Data Analytics using Spark/Python</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../03-notebooks/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
 
 <article>
-<p>FIXME</p>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Launching the Spark cluster</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
 
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 0 min
+      <br/>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How do I launch a Spark cluster at scale of Palmetto?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Be able to launch the local Spark cluster</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="1-launching-the-spark-cluster">1. Launching the Spark cluster</h2>
+
+  <ul>
+    <li>Inside the terminal tab from the <code class="highlighter-rouge">Setup</code> step, run the following commands:</li>
+  </ul>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/myspark
+$ ./download_spark.sh
+$ ./launch_spark_cluster.sh
+</code></pre></div>  </div>
+
+  <ul>
+    <li>The final output will look similar to the screenshot below (the nodes will be 
+different) .</li>
+  </ul>
+
+  <p><img src="../fig/02-cluster/01.png" alt="Spark" style="height:400px" /></p>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="2-summary-of-executed-scripts">2. Summary of executed scripts</h2>
+
+  <ul>
+    <li><code class="highlighter-rouge">download_spark.sh</code>: Untar a copy of <code class="highlighter-rouge">spark 2.4.5</code> in <code class="highlighter-rouge">~/software</code> and 
+install the necessary <code class="highlighter-rouge">pyspark</code> module for Python.</li>
+    <li><code class="highlighter-rouge">launch_spark_cluster.sh</code>: Parse information from the PBS job, use the first
+node as the Spark master and the remaining nodes as Spark workers. Information 
+regarding the total number of workers, number of cores, and memory per workers 
+are reported for notebook’s usage.</li>
+  </ul>
+
+</blockquote>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Dynamic Spark clusters can be deployed on Palmetto using provided scripts.</p>
+</li>
+    
+  </ul>
+</blockquote>
 
 </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../01-introduction/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../03-notebooks/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
 
 
 <!--  

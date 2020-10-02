@@ -65,7 +65,7 @@
 	<![endif]-->
 
   <title>
-  Discussion &ndash;  Introduction to Big Data Analytics using Spark/Python
+  Workshop notebooks &ndash;  Introduction to Big Data Analytics using Spark/Python
   </title>
 
   </head>
@@ -205,15 +205,232 @@
 
 
 
-<h1 class="maintitle"><a href="../index.html"> Introduction to Big Data Analytics using Spark/Python</a>: Discussion</h1>
 
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../02-cluster/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="../"> Introduction to Big Data Analytics using Spark/Python</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      
+    </h3>
+  </div>
+</div>
 
 <article>
-<p>FIXME</p>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Workshop notebooks</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
 
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 0 min
+      <br/>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How do I launch the workshop notebooks and link them to the Spark cluster?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Be able to setup notebooks to connect to the Spark cluster</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="1-where-are-the-notebooks">1. Where are the notebooks</h2>
+
+  <ul>
+    <li>The notebooks for this workshop are included inside myspark.</li>
+    <li>Double-click on <code class="highlighter-rouge">myspark</code> directory in the <code class="highlighter-rouge">File Browser</code> tab.</li>
+  </ul>
+
+  <p><img src="../fig/03-notebooks/01.png" alt="Notebooks" style="height:800px" /></p>
+
+  <ul>
+    <li>We will go through the four notebooks today.</li>
+    <li>Double-click on <code class="highlighter-rouge">intro-to-pyspark-01.ipynb</code> to open the first notebook.</li>
+  </ul>
+
+  <p><img src="../fig/03-notebooks/02.png" alt="Notebook 01" style="height:500px" /></p>
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="2-notebook-configuration">2. Notebook configuration</h2>
+
+  <ul>
+    <li>The first code cell of all the notebooks is the same.</li>
+    <li>This cell sets up the configuration to connect to the launched Spark cluster.</li>
+    <li>The following three configuration settings should be modified to match what 
+was reported on the terminal (<strong>they are not here</strong>).
+      <ul>
+        <li><code class="highlighter-rouge">spark.driver.memory</code>: value from <code class="highlighter-rouge">Memory per workers</code>.</li>
+        <li><code class="highlighter-rouge">spark.executor.instances</code>: value from <code class="highlighter-rouge">Num workers</code>.</li>
+        <li><code class="highlighter-rouge">spark.executor.memory</code>: value from <code class="highlighter-rouge">Memory per workers</code>.</li>
+        <li><code class="highlighter-rouge">spark.executor.cores</code>: value from <code class="highlighter-rouge">Cores per worker</code>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="../fig/03-notebooks/03.png" alt="Configuration" style="height:500px" /></p>
+</blockquote>
+
+<blockquote class="slide">
+  <h2 id="3-clean-up">3. Clean up</h2>
+
+  <p>Each notebook will open a separate SparkContext on the Spark cluster. This<br />
+SparkContext must be stopped (last cell of each notebook) when we are done.</p>
+</blockquote>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Understand your Spark cluster configuration to optimize notebooks’ resource request.</p>
+</li>
+    
+  </ul>
+</blockquote>
 
 </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="../02-cluster/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      
+    </h3>
+  </div>
+</div>
+
 
 
 <!--  
