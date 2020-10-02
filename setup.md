@@ -13,7 +13,7 @@ title: Setup
 > - Open a browser and go to [https://www.palmetto.clemson.edu](https://www.palmetto.clemson.edu).
 > - Click the JupyterHub link
 >
-> <img src="../fig/setup/01.png" alt="JupyterHub page" style="height:400px">
+> <img src="fig/setup/01.png" alt="JupyterHub page" style="height:400px">
 >
 {: .slide}
 
@@ -22,7 +22,7 @@ title: Setup
 > 
 > - Click the blue `Start My Server` button
 >
-> <img src="../fig/setup/02.png" alt="Start My Server" style="height:400px">
+> <img src="fig/setup/02.png" alt="Start My Server" style="height:400px">
 >
 {: .slide}
 
@@ -32,7 +32,7 @@ title: Setup
 > - Select the options as shown in the screenshot below
 >   - Check the `Advanced` box to show the additional options.
 >
-> <img src="../fig/setup/03.png" alt="Server Options" style="height:1000px">
+> <img src="fig/setup/03.png" alt="Server Options" style="height:1000px">
 >
 {: .slide}
 
@@ -41,7 +41,7 @@ title: Setup
 > 
 > - Select `File`/`New`/`Terminal`
 >
-> <img src="../fig/setup/04.png" alt="Terminal" style="height:300px">
+> <img src="fig/setup/04.png" alt="Terminal" style="height:300px">
 >
 > - Run the following commands in the terminal
 >
@@ -52,7 +52,7 @@ title: Setup
 > ~~~
 > {: .language-bash}
 >
-> <img src="../fig/setup/05.png" alt="get myspark" style="height:350px">
+> <img src="fig/setup/05.png" alt="get myspark" style="height:350px">
 {: .slide}
 
 
