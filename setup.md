@@ -8,40 +8,43 @@ title: Setup
 >
 {: .callout}
 
-> ## Step 1. Open JupyterHub
+> ## Step 1. Open OnDemand
 > 
-> - Open a browser and go to [https://www.palmetto.clemson.edu](https://www.palmetto.clemson.edu).
-> - Click the JupyterHub link
+> - Open a browser and go to [https://openod02.palmetto.clemson.edu/](https://openod02.palmetto.clemson.edu/).
+> - Go to the `Jupyter+Spark` app
 >
-> <img src="fig/setup/01.png" alt="JupyterHub page" style="height:400px">
+> <img src="fig/setup/01.png" alt="Jupyter+Spark app on Open OnDemand" style="height:700px">
 >
 {: .slide}
 
 
-> ## Step 2. Start My Server
+> ## Step 2. Jupyter + Spark app
 > 
-> - Click the blue `Start My Server` button
+> - Select the options for the app as described below, then click `Launch`
+>   - `Number of resource chunks (select)`: `3`
+>   - `CPU cores per chunk (ncpus)`: `8`
+>   - `Amount of memory per chunk (mem)`:  `15gb`
+>   - `Number of GPUs per chunk (ngpus)`:  `None`
+>   - `GPU Model (gpu_model)`: `None`
+>   - `Interconnect`: `1g - Ethernet older phases 1-6`
+>   - `Walltime`: `04:00:00`
+>   - `Queue`: `work1`
+>   - `Spark version`: `3.1.2`
+>   - `Anaconda Version`: `anaconda3/2021.05-gcc/8.3.1`
+>   - `Number of workers per node`: `1`
+>   - `Only launch the driver on the master node.`: Check this box. 
+> - Once the job is ready and the infrastructure is launched, click `Connect to Jupyter`. 
 >
-> <img src="fig/setup/02.png" alt="Start My Server" style="height:400px">
+> <img src="fig/setup/02.png" alt="Launch Jupyter Spark Server" style="height:500px">
 >
 {: .slide}
 
 
-> ## Step 3. Server Options
-> 
-> - Select the options as shown in the screenshot below
->   - Check the `Advanced` box to show the additional options.
->
-> <img src="fig/setup/03.png" alt="Server Options" style="height:1000px">
->
-{: .slide}
-
-
-> ## Step 4. Getting Workshop Materials
+> ## Step 3. Getting Workshop Materials
 > 
 > - Select `File`/`New`/`Terminal`
 >
-> <img src="fig/setup/04.png" alt="Terminal" style="height:300px">
+> <img src="fig/setup/03.png" alt="Terminal" style="height:300px">
 >
 > - Run the following commands in the terminal
 >
@@ -52,7 +55,7 @@ title: Setup
 > ~~~
 > {: .language-bash}
 >
-> <img src="fig/setup/05.png" alt="get myspark" style="height:350px">
+> <img src="fig/setup/04.png" alt="get myspark" style="height:350px">
 {: .slide}
 
 
