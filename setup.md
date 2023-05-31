@@ -10,7 +10,7 @@ title: Setup
 
 > ## Step 1. Open OnDemand
 > 
-> - Open a browser and go to [https://openod02.palmetto.clemson.edu/](https://openod02.palmetto.clemson.edu/).
+> - Open a browser and go to [https://openod.palmetto.clemson.edu/](https://openod.palmetto.clemson.edu/).
 > - Go to the `Jupyter+Spark` app
 >
 > <img src="fig/setup/01.png" alt="Jupyter+Spark app on Open OnDemand" style="height:700px">
